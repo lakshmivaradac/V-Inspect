@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | V-INSPECT</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="../inspection.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-car"></i>
+        </div>
+
+        <div>
+
+            <h2>V-INSPECT</h2>
+
+            <span>
+                VEHICLE INSPECTION
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+        <a href="../index.html">
+
+            <i class="fa-solid fa-table-cells-large"></i>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="vehicles.html">
+
+            <i class="fa-solid fa-car"></i>
+
+            Vehicles
+
+        </a>
+
+
+        <a href="inspection.html">
+
+            <i class="fa-regular fa-clipboard"></i>
+
+            Inspections
+
+        </a>
+
+
+        <a href="reports.html"
+           class="active">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            Reports
+
+        </a>
+
+
+        <a href="#">
+
+            <i class="fa-solid fa-users"></i>
+
+            Users
+
+        </a>
+
+
+        <a href="#">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+    <div class="page-title">
+
+        <h2>
+            Inspection Reports
+        </h2>
+
+    </div>
+
+
+    <div class="profile-area">
+
+        <div class="notification">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span>3</span>
+
+        </div>
+
+
+        <div class="profile">
+
+            <div class="profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Inspector
+                </strong>
+
+                <small>
+                    Admin
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- CONTENT -->
+
+<section class="inspection-container">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="inspection-heading">
+
+        <div>
+
+            <span class="section-number">
+                REPORTS
+            </span>
+
+            <h1>
+                Inspection Reports
+            </h1>
+
+            <p>
+                View and manage completed vehicle inspections.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- STATISTICS -->
+
+    <div class="result-summary">
+
+
+        <div class="summary-box">
+
+            <i class="fa-solid fa-clipboard-check"></i>
+
+            <strong id="totalInspections">
+                0
+            </strong>
+
+            <span>
+                Total Inspections
+            </span>
+
+        </div>
+
+
+        <div class="summary-box good-box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <strong id="passedInspections">
+                0
+            </strong>
+
+            <span>
+                Passed
+            </span>
+
+        </div>
+
+
+        <div class="summary-box minor-box">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <strong id="attentionInspections">
+                0
+            </strong>
+
+            <span>
+                Needs Attention
+            </span>
+
+        </div>
+
+
+        <div class="summary-box major-box">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            <strong id="failedInspections">
+                0
+            </strong>
+
+            <span>
+                Failed
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- REPORT TABLE -->
+
+    <div class="checklist-card">
+
+
+        <div class="checklist-title">
+
+            <div class="checklist-icon blue">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Completed Inspections
+                </h2>
+
+                <p>
+                    Select an inspection to view its report.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-container">
+
+            <table class="inspection-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            #
+                        </th>
+
+                        <th>
+                            Vehicle
+                        </th>
+
+                        <th>
+                            Owner
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="reportsTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div id="emptyMessage"
+             style="display:none; text-align:center; padding:30px;">
+
+            <i class="fa-solid fa-folder-open"
+               style="font-size:40px; margin-bottom:15px;">
+            </i>
+
+            <h3>
+                No inspections yet
+            </h3>
+
+            <p>
+                Complete a vehicle inspection to create a report.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+</section>
+
+</main>
+
+
+
+<script>
+
+
+// ==========================================
+// GET SAVED INSPECTIONS
+// ==========================================
+
+let inspections =
+    JSON.parse(
+        localStorage.getItem(
+            "inspections"
+        )
+    ) || [];
+
+
+
+// ==========================================
+// STATISTICS
+// ==========================================
+
+let passed = 0;
+
+let attention = 0;
+
+let failed = 0;
+
+
+inspections.forEach(
+    function(inspection) {
+
+        if (
+            inspection.status === "PASSED"
+        ) {
+
+            passed++;
+
+        }
+
+        else if (
+            inspection.status === "NEEDS ATTENTION"
+        ) {
+
+            attention++;
+
+        }
+
+        else if (
+            inspection.status === "FAILED"
+        ) {
+
+            failed++;
+
+        }
+
+    }
+);
+
+
+
+// ==========================================
+// DISPLAY STATISTICS
+// ==========================================
+
+document.getElementById(
+    "totalInspections"
+).textContent =
+    inspections.length;
+
+
+document.getElementById(
+    "passedInspections"
+).textContent =
+    passed;
+
+
+document.getElementById(
+    "attentionInspections"
+).textContent =
+    attention;
+
+
+document.getElementById(
+    "failedInspections"
+).textContent =
+    failed;
+
+
+
+// ==========================================
+// DISPLAY TABLE
+// ==========================================
+
+const table =
+    document.getElementById(
+        "reportsTable"
+    );
+
+
+const emptyMessage =
+    document.getElementById(
+        "emptyMessage"
+    );
+
+
+
+if (inspections.length === 0) {
+
+    emptyMessage.style.display =
+        "block";
+
+}
+
+
+else {
+
+    // Show newest first
+
+    inspections
+        .slice()
+        .reverse()
+        .forEach(
+            function(inspection, index) {
+
+
+                const row =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                // Status class
+
+                let statusClass =
+                    "status-passed";
+
+
+                if (
+                    inspection.status ===
+                    "FAILED"
+                ) {
+
+                    statusClass =
+                        "status-failed";
+
+                }
+
+                else if (
+                    inspection.status ===
+                    "NEEDS ATTENTION"
+                ) {
+
+                    statusClass =
+                        "status-attention";
+
+                }
+
+
+
+                row.innerHTML = `
+
+                    <td>
+                        ${index + 1}
+                    </td>
+
+                    <td>
+                        <strong>
+                            ${inspection.vehicle}
+                        </strong>
+                    </td>
+
+                    <td>
+                        ${inspection.owner}
+                    </td>
+
+                    <td>
+                        <strong>
+                            ${inspection.score}%
+                        </strong>
+                    </td>
+
+                    <td>
+
+                        <span class="${statusClass}">
+                            ${inspection.status}
+                        </span>
+
+                    </td>
+
+                    <td>
+                        ${inspection.date}
+                    </td>
+
+                    <td>
+
+                        <button
+                            class="next-btn"
+                            onclick="viewReport(${inspection.id})">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View
+
+                        </button>
+
+                    </td>
+
+                `;
+
+
+                table.appendChild(
+                    row
+                );
+
+            }
+        );
+
+}
+
+
+
+// ==========================================
+// VIEW SPECIFIC REPORT
+// ==========================================
+
+function viewReport(id) {
+
+    localStorage.setItem(
+        "selectedInspectionId",
+        id
+    );
+
+
+    window.location.href =
+        "inspection-report.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

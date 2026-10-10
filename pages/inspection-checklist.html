@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Checklist | V-INSPECT</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="../inspection.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-car"></i>
+        </div>
+
+        <div>
+            <h2>V-INSPECT</h2>
+            <span>VEHICLE INSPECTION</span>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+        <a href="../index.html">
+            <i class="fa-solid fa-table-cells-large"></i>
+            Dashboard
+        </a>
+
+        <a href="vehicles.html">
+            <i class="fa-solid fa-car"></i>
+            Vehicles
+        </a>
+
+        <a href="inspection.html" class="active">
+            <i class="fa-regular fa-clipboard"></i>
+            Inspections
+        </a>
+
+        <a href="reports.html">
+            <i class="fa-solid fa-chart-column"></i>
+            Reports
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-users"></i>
+            Users
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <a href="inspection.html"
+               class="back-button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </a>
+
+            <h2>Vehicle Inspection</h2>
+
+        </div>
+
+
+        <div class="profile-area">
+
+            <div class="notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>3</span>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-image">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+
+                    <strong>Inspector</strong>
+
+                    <small>Admin</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <section class="inspection-container">
+
+
+        <!-- HEADING -->
+
+        <div class="inspection-heading">
+
+            <div>
+
+                <span class="section-number">
+                    STEP 2
+                </span>
+
+                <h1>Vehicle Inspection</h1>
+
+                <p>
+                    Check each component and select the
+                    appropriate condition.
+                </p>
+
+            </div>
+
+
+            <div class="progress">
+
+                <span>2 of 4</span>
+
+                <div class="progress-bar">
+
+                    <div style="width: 50%;"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEHICLE SUMMARY -->
+
+        <div class="vehicle-summary">
+
+            <div class="summary-icon">
+
+                <i class="fa-solid fa-car"></i>
+
+            </div>
+
+            <div>
+
+                <span>Vehicle</span>
+
+                <strong id="summaryVehicle">
+                    Vehicle
+                </strong>
+
+            </div>
+
+            <div>
+
+                <span>Owner</span>
+
+                <strong id="summaryOwner">
+                    Owner
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXTERIOR -->
+
+        <div class="checklist-card">
+
+            <div class="checklist-title">
+
+                <div class="checklist-icon blue">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+
+                <div>
+                    <h2>Exterior</h2>
+                    <p>Inspect the external body components.</p>
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Body Condition</strong>
+                    <p>Check for dents, rust and visible damage.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button"
+                            class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button"
+                            class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button"
+                            class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Windshield</strong>
+                    <p>Check cracks and visibility.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button"
+                            class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button"
+                            class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button"
+                            class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Mirrors</strong>
+                    <p>Check side and rear-view mirrors.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button"
+                            class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button"
+                            class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button"
+                            class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TYRES -->
+
+        <div class="checklist-card">
+
+            <div class="checklist-title">
+
+                <div class="checklist-icon orange">
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+
+                <div>
+                    <h2>Tyres & Wheels</h2>
+                    <p>Check tyre condition and wheel safety.</p>
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Front Tyres</strong>
+                    <p>Check tread depth and tyre damage.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Rear Tyres</strong>
+                    <p>Check tread and visible damage.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIGHTS -->
+
+        <div class="checklist-card">
+
+            <div class="checklist-title">
+
+                <div class="checklist-icon purple">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+                    <h2>Lights</h2>
+                    <p>Check all vehicle lighting systems.</p>
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Headlights</strong>
+                    <p>Check high and low beam operation.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Brake Lights</strong>
+                    <p>Check brake light operation.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Indicators</strong>
+                    <p>Check left and right indicators.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BRAKES -->
+
+        <div class="checklist-card">
+
+            <div class="checklist-title">
+
+                <div class="checklist-icon red">
+                    <i class="fa-solid fa-stop"></i>
+                </div>
+
+                <div>
+                    <h2>Brakes</h2>
+                    <p>Inspect the braking system.</p>
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Brake Pedal</strong>
+                    <p>Check pedal response and condition.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="inspection-item">
+
+                <div>
+                    <strong>Brake Performance</strong>
+                    <p>Check overall braking performance.</p>
+                </div>
+
+                <div class="condition-buttons">
+
+                    <button type="button" class="condition good">
+                        <i class="fa-solid fa-check"></i>
+                        Good
+                    </button>
+
+                    <button type="button" class="condition minor">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Minor
+                    </button>
+
+                    <button type="button" class="condition major">
+                        <i class="fa-solid fa-xmark"></i>
+                        Major
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTES -->
+
+        <div class="checklist-card">
+
+            <div class="checklist-title">
+
+                <div class="checklist-icon green">
+                    <i class="fa-solid fa-note-sticky"></i>
+                </div>
+
+                <div>
+                    <h2>Inspector Notes</h2>
+                    <p>Add any additional observations.</p>
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="inspectionNotes"
+                class="inspection-notes"
+                placeholder="Enter inspection notes..."></textarea>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="form-actions">
+
+            <a href="inspection.html"
+               class="cancel-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+
+            </a>
+
+
+            <button
+                type="button"
+                class="next-btn"
+                id="continueChecklist">
+
+                Continue to Result
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<script>
+
+    /*
+       Display vehicle information entered
+       on Step 1.
+    */
+
+    const vehicle =
+        localStorage.getItem("vehicleNumber");
+
+    const owner =
+        localStorage.getItem("ownerName");
+
+
+    if (vehicle) {
+
+        document.getElementById(
+            "summaryVehicle"
+        ).textContent = vehicle;
+
+    }
+
+
+    if (owner) {
+
+        document.getElementById(
+            "summaryOwner"
+        ).textContent = owner;
+
+    }
+
+
+    /*
+       Allow only one condition to be selected
+       for each inspection item.
+    */
+
+    const inspectionItems =
+        document.querySelectorAll(".inspection-item");
+
+
+    inspectionItems.forEach(function(item) {
+
+        const buttons =
+            item.querySelectorAll(".condition");
+
+
+      buttons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("selected");
+
+        });
+
+        button.classList.add("selected");
+
+    });
+
+});
+
+    });
+document.getElementById("continueChecklist").addEventListener("click", function () {
+
+    let good = 0;
+    let minor = 0;
+    let major = 0;
+
+    const items = document.querySelectorAll(".inspection-item");
+
+    items.forEach(function (item) {
+
+        const selected = item.querySelector(".condition.selected");
+
+        if (selected) {
+
+            if (selected.classList.contains("good")) {
+                good++;
+            }
+
+            else if (selected.classList.contains("minor")) {
+                minor++;
+            }
+
+            else if (selected.classList.contains("major")) {
+                major++;
+            }
+
+        }
+
+    });
+
+    const notes = document.getElementById("inspectionNotes").value;
+
+    localStorage.setItem("goodCount", good);
+    localStorage.setItem("minorCount", minor);
+    localStorage.setItem("majorCount", major);
+    localStorage.setItem("inspectionNotes", notes);
+
+    window.location.href = "inspection-result.html";
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

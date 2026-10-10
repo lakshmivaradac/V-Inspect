@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Inspection Report | V-INSPECT</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="../inspection.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🚗
+            </div>
+
+            <div>
+
+                <h2>V-INSPECT</h2>
+
+                <span>
+                    VEHICLE INSPECTION
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="../index.html">
+                Dashboard
+            </a>
+
+
+            <a href="vehicles.html">
+                Vehicles
+            </a>
+
+
+            <a href="inspection.html"
+               class="active">
+
+                Inspections
+
+            </a>
+
+
+            <a href="reports.html">
+                Reports
+            </a>
+
+
+            <a href="#">
+                Users
+            </a>
+
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <h2>
+                    Final Inspection Report
+                </h2>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================================
+             INSPECTION CONTENT
+        =========================================== -->
+
+        <section class="inspection-container">
+
+
+            <!-- HEADING -->
+
+            <div class="inspection-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        STEP 4
+                    </span>
+
+
+                    <h1>
+                        Final Inspection Report
+                    </h1>
+
+
+                    <p>
+                        Review the completed vehicle inspection report.
+                    </p>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <span>
+                        4 of 4
+                    </span>
+
+
+                    <div class="progress-bar">
+
+                        <div style="width:100%;"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 VEHICLE INFORMATION
+            =========================================== -->
+
+            <div class="checklist-card">
+
+
+                <div class="checklist-title">
+
+
+                    <div class="checklist-icon blue">
+                        🚗
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Vehicle Information
+                        </h2>
+
+
+                        <p>
+                            Vehicle identification details
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="result-summary">
+
+
+                    <div class="summary-box">
+
+                        <span>
+                            Registration Number
+                        </span>
+
+
+                        <strong id="reportVehicle">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="summary-box">
+
+                        <span>
+                            Owner Name
+                        </span>
+
+
+                        <strong id="reportOwner">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INSPECTION RESULT
+            =========================================== -->
+
+            <div class="result-card">
+
+
+                <div class="result-icon">
+                    🛡️
+                </div>
+
+
+                <h2 id="reportStatus">
+                    PASSED
+                </h2>
+
+
+                <div class="score">
+
+
+                    <strong id="reportScore">
+                        0%
+                    </strong>
+
+
+                    <span>
+                        Safety Score
+                    </span>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INSPECTION SUMMARY
+            =========================================== -->
+
+            <div class="checklist-card">
+
+
+                <div class="checklist-title">
+
+
+                    <div class="checklist-icon green">
+                        ✓
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Inspection Summary
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="result-summary">
+
+
+                    <div class="summary-box good-box">
+
+                        <strong id="reportGood">
+                            0
+                        </strong>
+
+
+                        <span>
+                            Good
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="summary-box minor-box">
+
+                        <strong id="reportMinor">
+                            0
+                        </strong>
+
+
+                        <span>
+                            Needs Attention
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="summary-box major-box">
+
+                        <strong id="reportMajor">
+                            0
+                        </strong>
+
+
+                        <span>
+                            Failed
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INSPECTOR NOTES
+            =========================================== -->
+
+            <div class="checklist-card">
+
+
+                <div class="checklist-title">
+
+
+                    <div class="checklist-icon orange">
+                        📝
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Inspector Notes
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+                <p id="reportNotes">
+                    No additional notes.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 ACTION BUTTONS
+            =========================================== -->
+
+            <div class="form-actions">
+
+
+                <button
+                    class="cancel-btn"
+                    onclick="goBackToReports()">
+
+                    ← Back to Reports
+
+                </button>
+
+
+
+                <button
+                    class="cancel-btn"
+                    onclick="window.print()">
+
+                    🖨️ Print Report
+
+                </button>
+
+
+
+                <button
+                    class="next-btn"
+                    onclick="window.print()">
+
+                    📄 Save as PDF
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script>
+
+
+        // ==========================================
+        // GET SELECTED INSPECTION ID
+        // ==========================================
+
+        const selectedId =
+            localStorage.getItem(
+                "selectedInspectionId"
+            );
+
+
+
+        // ==========================================
+        // GET ALL SAVED INSPECTIONS
+        // ==========================================
+
+        const inspections =
+            JSON.parse(
+                localStorage.getItem("inspections")
+            ) || [];
+
+
+
+        // ==========================================
+        // FIND SELECTED INSPECTION
+        // ==========================================
+
+        let inspection = null;
+
+
+
+        if (selectedId) {
+
+            inspection =
+                inspections.find(
+                    item =>
+                        String(item.id) ===
+                        String(selectedId)
+                );
+
+        }
+
+
+
+        // ==========================================
+        // IF NO SELECTED INSPECTION
+        // USE CURRENT INSPECTION DATA
+        // ==========================================
+
+        if (!inspection) {
+
+
+            const vehicle =
+                localStorage.getItem(
+                    "vehicleNumber"
+                ) || "Not available";
+
+
+            const owner =
+                localStorage.getItem(
+                    "ownerName"
+                ) || "Not available";
+
+
+            const good =
+                Number(
+                    localStorage.getItem(
+                        "goodCount"
+                    )
+                ) || 0;
+
+
+            const minor =
+                Number(
+                    localStorage.getItem(
+                        "minorCount"
+                    )
+                ) || 0;
+
+
+            const major =
+                Number(
+                    localStorage.getItem(
+                        "majorCount"
+                    )
+                ) || 0;
+
+
+            const notes =
+                localStorage.getItem(
+                    "inspectionNotes"
+                ) || "No additional notes.";
+
+
+
+            // Calculate score
+
+            const total =
+                good + minor + major;
+
+
+            let score = 0;
+
+
+            if (total > 0) {
+
+                score =
+                    Math.round(
+                        (
+                            (
+                                good +
+                                (minor * 0.5)
+                            ) / total
+                        ) * 100
+                    );
+
+            }
+
+
+
+            // Determine status
+
+            let status =
+                "PASSED";
+
+
+            if (major > 0) {
+
+                status =
+                    "FAILED";
+
+            }
+
+            else if (minor > 0) {
+
+                status =
+                    "NEEDS ATTENTION";
+
+            }
+
+
+
+            // Create temporary display object
+
+            inspection = {
+
+                vehicle: vehicle,
+
+                owner: owner,
+
+                good: good,
+
+                minor: minor,
+
+                major: major,
+
+                score: score,
+
+                status: status,
+
+                notes: notes
+
+            };
+
+        }
+
+
+
+        // ==========================================
+        // DISPLAY INSPECTION
+        // ==========================================
+
+        document.getElementById(
+            "reportVehicle"
+        ).textContent =
+            inspection.vehicle || "-";
+
+
+
+        document.getElementById(
+            "reportOwner"
+        ).textContent =
+            inspection.owner || "-";
+
+
+
+        document.getElementById(
+            "reportGood"
+        ).textContent =
+            inspection.good || 0;
+
+
+
+        document.getElementById(
+            "reportMinor"
+        ).textContent =
+            inspection.minor || 0;
+
+
+
+        document.getElementById(
+            "reportMajor"
+        ).textContent =
+            inspection.major || 0;
+
+
+
+        document.getElementById(
+            "reportScore"
+        ).textContent =
+            (inspection.score || 0) + "%";
+
+
+
+        document.getElementById(
+            "reportStatus"
+        ).textContent =
+            inspection.status || "PASSED";
+
+
+
+        document.getElementById(
+            "reportNotes"
+        ).textContent =
+            inspection.notes ||
+            "No additional notes.";
+
+
+
+        // ==========================================
+        // BACK TO REPORTS
+        // ==========================================
+
+        function goBackToReports() {
+
+            window.location.href =
+                "reports.html";
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

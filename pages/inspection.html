@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>New Inspection | V-INSPECT</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../inspection.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-car"></i>
+        </div>
+
+        <div>
+            <h2>V-INSPECT</h2>
+            <span>VEHICLE INSPECTION</span>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+        <a href="../index.html">
+            <i class="fa-solid fa-table-cells-large"></i>
+            Dashboard
+        </a>
+
+        <a href="vehicles.html">
+            <i class="fa-solid fa-car"></i>
+            Vehicles
+        </a>
+
+        <a href="inspection.html" class="active">
+            <i class="fa-regular fa-clipboard"></i>
+            Inspections
+        </a>
+
+        <a href="reports.html">
+            <i class="fa-solid fa-chart-column"></i>
+            Reports
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-users"></i>
+            Users
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="page-title">
+
+            <a href="../index.html"
+               class="back-button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </a>
+
+            <h2>New Vehicle Inspection</h2>
+
+        </div>
+
+
+        <div class="profile-area">
+
+            <div class="notification">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>3</span>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-image">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>Inspector</strong>
+
+                    <small>Admin</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    <section class="inspection-container">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="inspection-heading">
+
+            <div>
+
+                <span class="section-number">
+                    STEP 1
+                </span>
+
+                <h1>Vehicle Information</h1>
+
+                <p>
+                    Enter the vehicle details before starting
+                    the inspection.
+                </p>
+
+            </div>
+
+
+            <div class="progress">
+
+                <span>1 of 4</span>
+
+                <div class="progress-bar">
+
+                    <div></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="vehicleForm">
+
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+
+                    <div class="card-icon blue">
+
+                        <i class="fa-solid fa-car"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>Basic Vehicle Information</h2>
+
+                        <p>Enter the identification details.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Vehicle Registration Number
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="vehicleNumber"
+                            placeholder="e.g. KA 01 AB 1234"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Owner Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ownerName"
+                            placeholder="Enter owner name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Vehicle Type</label>
+
+                        <select id="vehicleType">
+
+                            <option value="">
+                                Select vehicle type
+                            </option>
+
+                            <option>Car</option>
+
+                            <option>Motorcycle</option>
+
+                            <option>Truck</option>
+
+                            <option>Bus</option>
+
+                            <option>Van</option>
+
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Fuel Type</label>
+
+                        <select id="fuelType">
+
+                            <option value="">
+                                Select fuel type
+                            </option>
+
+                            <option>Petrol</option>
+
+                            <option>Diesel</option>
+
+                            <option>Electric</option>
+
+                            <option>Hybrid</option>
+
+                            <option>CNG</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Manufacturer</label>
+
+                        <input
+                            type="text"
+                            id="manufacturer"
+                            placeholder="e.g. Hyundai">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Model</label>
+
+                        <input
+                            type="text"
+                            id="model"
+                            placeholder="e.g. i20">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Manufacturing Year</label>
+
+                        <input
+                            type="number"
+                            id="year"
+                            placeholder="e.g. 2022"
+                            min="1900"
+                            max="2026">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Odometer Reading</label>
+
+                        <div class="input-unit">
+
+                            <input
+                                type="number"
+                                id="odometer"
+                                placeholder="e.g. 25430">
+
+                            <span>km</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INSPECTOR INFORMATION -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+
+                    <div class="card-icon purple">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>Inspection Information</h2>
+
+                        <p>Details about this inspection.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>Inspector Name</label>
+
+                        <input
+                            type="text"
+                            id="inspector"
+                            value="Inspector">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Inspection Date</label>
+
+                        <input
+                            type="date"
+                            id="inspectionDate">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="form-actions">
+
+                <a href="../index.html"
+                   class="cancel-btn">
+
+                    Cancel
+
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="next-btn">
+
+                    Continue to Inspection
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script src="../script.js"></script>
+
+<script src="../inspection.js"></script>
+
+
+</body>
+
+</html>
